@@ -1,0 +1,23 @@
+# Published: N0 = 100, 400 trials (caption of Fig. 7).
+[paper]
+N0 = 100
+beta = 5.0
+sigma_out = 0.1
+sigma_in = [1.0, 0.6, 0.4]
+alpha0_grid = [1.0, 8.0, 30]
+trials = 400
+seed = 7
+b_alpha0 = 3.0
+b_beta = 5.0
+b_sigma_out = 1.0
+b_sigma_in_grid = [0.2, 1.0, 50]
+# published figure: plain mean (one failed trial blanks a point), 2 SEM
+rule = "all_separable"
+n_sem = 2.0
+
+
+# quick: overrides of [paper] only (a small run that shows the effect)
+[quick]
+N0 = 50
+alpha0_grid = [1.0, 8.0, 8]
+trials = 10

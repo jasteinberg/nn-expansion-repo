@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+*.npz
+*.npy
+_chk*.py
+artifacts/
+.ipynb_checkpoints/
+results/
+logs/

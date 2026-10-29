@@ -1,0 +1,20 @@
+# Published (caption of Fig. 11): N0 = 20,
+# sigma_out = 1, beta = 2, 200 trials, alpha0 = linspace(0.1, 110, 30).
+[paper]
+N0 = 20
+beta = 2.0
+sigma_out = 1.0
+alpha0_grid = [0.1, 110.0, 30]
+trials = 200
+seed = 11
+n_test = 500
+# published figure: blank if > 50 % of trials fail, 2 SEM
+rule = "majority_separable"
+n_sem = 2.0
+
+
+# quick: overrides of [paper] only (a small run that shows the effect)
+[quick]
+alpha0_grid = [0.1, 110.0, 8]
+trials = 6
+n_test = 4000

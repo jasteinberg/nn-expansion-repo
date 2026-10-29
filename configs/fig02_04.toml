@@ -1,0 +1,25 @@
+# Published (captions of Figs. 2-4): N0 = 100,
+# 200 trials, alpha0 = linspace(0.1, 40, 30). n_test is the Monte-Carlo test set
+# for the unpruned error (500 per trial in the published runs).
+[paper]
+N0 = 100
+betas = [5.0, 10.0]
+f_sparse = 0.02
+f_dense = 0.5
+A = 0.2
+sigma_out = 0.25
+alpha0_grid = [0.1, 40.0, 30]
+trials = 200
+seed = 2
+n_test = 500
+# averaging and error bars of the published figures (blank if > 50 % of trials fail, 1 SEM)
+rule = "majority_separable"
+n_sem = 1.0
+
+
+# quick: overrides of [paper] only (a small run that shows the effect)
+[quick]
+N0 = 40
+alpha0_grid = [0.1, 40.0, 12]
+trials = 8
+n_test = 4000

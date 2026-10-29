@@ -1,0 +1,41 @@
+# Published (captions of Figs. 12-14 and the published runs): sigma_out = 0.5,
+# N0 = 100, 10001 epochs, traces every 20 epochs, learning rates in published units
+# (step eta sqrt(N)), init 0.1 N(0,1)/sqrt(N), stop at |step| < 1e-6.
+# Trial counts of Figs. 12 and 14 are not recorded; 100 is a choice. Fig. 13 shows means over 200 trials at N0 = 100.
+# Quick keeps N0 = 100: in published units the step scales with sqrt(N), and the
+# eta = 0.5 behaviour of Fig. 12 depends on it.
+[paper]
+sigma_out = 0.5
+seed = 12
+eta_unit = "published"
+init_scale = 0.1
+stop_tol = 1e-6
+N0_12 = 100
+etas_12 = [0.5, 0.05, 0.005]
+alpha0_grid_12 = [0.1, 10.0, 30]
+epochs_12 = 10001
+trials_12 = 100
+N0_13 = 100
+alpha0_13 = [3.0, 8.0]
+etas_13 = [0.5, 0.05, 0.005]
+epochs_13 = 10001
+record_every_13 = 20
+trials_13 = 200
+N0_14 = 100
+betas_14 = [1.0, 3.0, 5.0]
+eta_14 = 0.01
+alpha0_grid_14 = [0.1, 25.0, 30]
+epochs_14 = 10001
+trials_14 = 100
+# published figures: mean over all trials (none can fail), 1 SEM
+rule = "separable_only"
+n_sem = 1.0
+
+
+# quick: overrides of [paper] only (a small run that shows the effect)
+[quick]
+alpha0_grid_12 = [0.1, 10.0, 8]
+trials_12 = 6
+trials_13 = 20
+alpha0_grid_14 = [0.1, 25.0, 8]
+trials_14 = 6

@@ -1,0 +1,7 @@
+# Fig. 5 is pure theory; both profiles are the published grid.
+[paper]
+inv_sigma2 = [0.01, 8.0, 30]
+betas = [1.0, 3.0, 5.0]
+
+# quick: overrides of [paper] only (a small run that shows the effect)
+[quick]

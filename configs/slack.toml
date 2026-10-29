@@ -1,0 +1,14 @@
+# Check of Sec. III C; not a published figure.
+[paper]
+N0 = 100
+alpha0 = 4.0
+sigma_out = 0.5
+sigma_in = 1.0
+betas = [2.0, 5.0, 10.0, 30.0, 100.0]
+trials = 50
+seed = 25
+
+# quick: overrides of [paper] only (a small run that shows the effect)
+[quick]
+N0 = 40
+trials = 8

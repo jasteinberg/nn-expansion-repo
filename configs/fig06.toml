@@ -1,0 +1,12 @@
+# Fig. 6 is pure theory; both profiles are the published grids.
+# min_alpha0_grid: the alpha0 grid the published panels (c, d) minimised over,
+# inferred from the published points (spacing 230/119 and 85/84).
+[paper]
+sigma_out = [0.25, 1.0]
+alpha0_grid = [[0.0, 80.0, 60], [0.0, 30.0, 60]]
+betas = [1.0, 5.0, 10.0]
+beta_grid = [1.0, 30.0, 30]
+min_alpha0_grid = [[0.0, 230.0, 120], [0.0, 85.0, 85]]
+
+# quick: overrides of [paper] only (a small run that shows the effect)
+[quick]

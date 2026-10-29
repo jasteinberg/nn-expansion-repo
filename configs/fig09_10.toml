@@ -1,0 +1,31 @@
+# Published (captions of Figs. 9-10): N0 = 100, a = 0.5,
+# 9a: 200 trials, alpha0 = linspace(0.1, 14, 20); 9b and 10: 400 trials,
+# alpha0 = linspace(0.1, 14, 30); A = 1; Fig. 10 at beta = 10.
+# Quick keeps N0 = 100: at N0 = 40 a sparse layer has ~3 active units per pattern
+# and the noisy-teacher curve of 9b sits visibly above its N0 = 100 value.
+[paper]
+N0 = 100
+a = 0.5
+f_sparse = 0.02
+f_dense = 0.5
+A = 1.0
+betas_9 = [1.0, 5.0]
+beta_10 = 10.0
+alpha0_grid_9a = [0.1, 14.0, 20]
+alpha0_grid_9b_10 = [0.1, 14.0, 30]
+trials_9a = 200
+trials_9b_10 = 400
+seed = 9
+n_test = 500
+# published figures: blank if > 50 % of trials fail, 2 SEM
+rule = "majority_separable"
+n_sem = 2.0
+
+
+# quick: overrides of [paper] only (a small run that shows the effect)
+[quick]
+alpha0_grid_9a = [0.1, 14.0, 10]
+alpha0_grid_9b_10 = [0.1, 14.0, 10]
+trials_9a = 8
+trials_9b_10 = 8
+n_test = 4000

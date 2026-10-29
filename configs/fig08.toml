@@ -1,0 +1,30 @@
+# Published (caption of Fig. 8): (a) beta = 5, sigma_out = 0.25, N0 = 100;
+# (b) sigma_out = 0.5, N0 = 80; sigma_in = A = 1, 200 trials. (b) minimises over
+# alpha0 = linspace(3, 22, 40) (for the stochastic curve linspace(3, 22, 40) or
+# linspace(2, 22, 40); not recorded).
+[paper]
+a_N0 = 100
+a_beta = 5.0
+a_sigma_out = 0.25
+a_alpha0_grid = [0.1, 40.0, 30]
+b_N0 = 80
+b_sigma_out = 0.5
+b_beta_grid = [1.0, 5.0, 12]
+b_alpha0_grid = [3.0, 22.0, 40]
+f_sparse = 0.02
+f_dense = 0.5
+A = 1.0
+trials = 200
+seed = 8
+# published figures: blank if > 50 % of trials fail; 8a 1 SEM, 8b 2 SEM
+rule = "majority_separable"
+a_n_sem = 1.0
+b_n_sem = 2.0
+
+
+# quick: overrides of [paper] only (a small run that shows the effect)
+[quick]
+a_N0 = 40
+a_alpha0_grid = [0.1, 40.0, 12]
+b_beta_grid = [1.0, 5.0, 5]
+trials = 8
